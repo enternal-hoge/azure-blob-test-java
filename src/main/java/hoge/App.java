@@ -31,7 +31,7 @@ public class App {
 		BlobServiceClient storageClient = new BlobServiceClientBuilder().endpoint(endpoint).credential(credential).buildClient();
 		
 		//Blob内で使用されるコンテナの実態を表すクライアントAPIを作成する。
-		BlobContainerClient blobContainerClient = storageClient.getBlobContainerClient("mtgback-stor01-container01-eval-jpe");
+		BlobContainerClient blobContainerClient = storageClient.getBlobContainerClient("<YOUR_STORAGE_CONTAINER_NAME>");
 
 		//コンテナクライアントAPIを使用して、ファイルの実体（この場合Blob自体）を取得する。
 		BlobClient blobClient = blobContainerClient.getBlobClient("test.txt");
